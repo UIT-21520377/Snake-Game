@@ -127,7 +127,16 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Smake.cpp" />
+    <ClCompile Include="..\..\TestSnake\Cursor.cpp" />
+    <ClCompile Include="..\..\TestSnake\Draw.cpp" />
+    <ClCompile Include="..\..\TestSnake\Game.cpp" />
+    <ClCompile Include="..\..\TestSnake\Input.cpp" />
+    <ClCompile Include="..\..\TestSnake\Logic.cpp" />
+    <ClCompile Include="..\..\TestSnake\SnakeGame.cpp" />
+    <ClCompile Include="Main.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="SnakeGame.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
