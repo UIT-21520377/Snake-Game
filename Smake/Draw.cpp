@@ -42,7 +42,7 @@ void SnakeGame::DrawStartScreen()
     cout << "  ================================" << endl;
     cout << "  ||                           ||" << endl;
     cout << "  ||       Press 's' for        ||" << endl;
-    cout << "  ||        Easy Mode         ||" << endl;
+    cout << "  ||        Simple Mode         ||" << endl;
     cout << "  ||                           ||" << endl;
     cout << "  ================================" << endl;
 }
