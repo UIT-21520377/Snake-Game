@@ -1,7 +1,7 @@
 #include "SnakeGame.h"
 #include <iostream>
 
-using namespace std; 
+using namespace std;
 
 void SnakeGame::DrawBackground()
 {
@@ -41,8 +41,8 @@ void SnakeGame::DrawStartScreen()
     cout << "  ||        Snake Game         ||" << endl;
     cout << "  ================================" << endl;
     cout << "  ||                           ||" << endl;
-    cout << "  ||       Press 's' to        ||" << endl;
-    cout << "  ||        Start Game         ||" << endl;
+    cout << "  ||       Press 's' for        ||" << endl;
+    cout << "  ||        Easy Mode         ||" << endl;
     cout << "  ||                           ||" << endl;
     cout << "  ================================" << endl;
 }
