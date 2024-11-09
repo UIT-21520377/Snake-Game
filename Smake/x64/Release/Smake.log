@@ -1,0 +1,6 @@
+﻿  Smake.cpp
+  Generating code
+  Previous IPDB not found, fall back to full compilation.
+  All 24 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  Finished generating code
+  Smake.vcxproj -> D:\Code\Snake\Smake\x64\Release\Smake.exe
