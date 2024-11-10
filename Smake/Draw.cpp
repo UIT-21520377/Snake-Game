@@ -8,6 +8,7 @@ void SnakeGame::DrawBackground()
     system("cls");
 
     SetConsoleTextAttribute(hConsole, FOREGROUND_GREEN);
+    cout << "    ~ S N A K E  G A M E ~    " << endl;
     cout << "       ---_ ......._-_--." << endl;
     cout << "      (|\\ /      / /| \\  \\" << endl;
     cout << "      /  /     .'  -=-'   `." << endl;
