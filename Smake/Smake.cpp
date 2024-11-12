@@ -185,7 +185,7 @@ void SnakeGame::Draw()
         cout << "Game Over! Press any key to continue." << endl;
     }
 }
-
+/*
 void SnakeGame::Input()
 {
     if (_kbhit())
@@ -213,8 +213,8 @@ void SnakeGame::Input()
             break;
         }
     }
-}
-/* void SnakeGame::Input()
+}*/
+void SnakeGame::Input()
 {
     if (_kbhit())
     {
@@ -248,7 +248,7 @@ void SnakeGame::Input()
         }
     }
 }
-    */
+    
 void SnakeGame::Logic()
 {
     int prevX = tailX[0];
