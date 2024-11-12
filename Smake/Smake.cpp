@@ -214,41 +214,7 @@ void SnakeGame::Input()
         }
     }
 }
-/* void SnakeGame::Input()
-{
-    if (_kbhit())
-    {
-        int key = _getch();
-        if (key == 224) // Kiểm tra nếu phím là mũi tên
-        {
-            key = _getch(); // Lấy mã thứ hai để xác định hướng cụ thể
-            switch (key)
-            {
-            case 75: // Mũi tên trái
-                if (dir != RIGHT)
-                    dir = LEFT;
-                break;
-            case 77: // Mũi tên phải
-                if (dir != LEFT)
-                    dir = RIGHT;
-                break;
-            case 72: // Mũi tên lên
-                if (dir != DOWN)
-                    dir = UP;
-                break;
-            case 80: // Mũi tên xuống
-                if (dir != UP)
-                    dir = DOWN;
-                break;
-            }
-        }
-        else if (key == 'x') // Kiểm tra nếu bấm 'x' để thoát
-        {
-            gameOver = true;
-        }
-    }
-}
-  */  
+ 
 void SnakeGame::Logic()
 {
     int prevX = tailX[0];
