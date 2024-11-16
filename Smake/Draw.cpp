@@ -89,7 +89,8 @@ void SnakeGame::Draw()
     SetConsoleCursorPosition(hConsole, pos);
 
     for (int i = 0; i < width + 2; i++) {
-        SetConsoleTextAttribute(hConsole, FOREGROUND_GREEN | FOREGROUND_INTENSITY);
+        if (isHardMode) SetConsoleTextAttribute(hConsole, FOREGROUND_RED | FOREGROUND_INTENSITY);
+        else SetConsoleTextAttribute(hConsole, FOREGROUND_GREEN | FOREGROUND_INTENSITY);
         cout << "\xB2";
     }
     cout << endl;
@@ -98,7 +99,8 @@ void SnakeGame::Draw()
         for (int j = 0; j < width; j++)
         {
             if (j == 0) {
-                SetConsoleTextAttribute(hConsole, FOREGROUND_GREEN | FOREGROUND_INTENSITY);
+                if (isHardMode) SetConsoleTextAttribute(hConsole, FOREGROUND_RED | FOREGROUND_INTENSITY);
+                else SetConsoleTextAttribute(hConsole, FOREGROUND_GREEN | FOREGROUND_INTENSITY);
                 cout << "\xB2";
             }
             if ((i == headY && j == headX))
@@ -122,12 +124,24 @@ void SnakeGame::Draw()
                         print = true;
                     }
                 }
+                
+                if (!print && isHardMode) {
+                    for (int b = 0; b < numBlocks; b++) {
+                        if (blockX[b] == j && blockY[b] == i) {
+                            SetConsoleTextAttribute(hConsole, FOREGROUND_RED | FOREGROUND_INTENSITY); // Red block
+                            cout << "X";
+                            print = true;
+                        }
+                    }
+                }
+         
                 if (!print)
                     cout << " ";
             }
 
             if (j == width - 1) {
-                SetConsoleTextAttribute(hConsole, FOREGROUND_GREEN | FOREGROUND_INTENSITY);
+                if (isHardMode) SetConsoleTextAttribute(hConsole, FOREGROUND_RED | FOREGROUND_INTENSITY);
+                else SetConsoleTextAttribute(hConsole, FOREGROUND_GREEN | FOREGROUND_INTENSITY);
                 cout << "\xB2";
             }
         }
@@ -135,7 +149,8 @@ void SnakeGame::Draw()
     }
 
     for (int i = 0; i < width + 2; i++) {
-        SetConsoleTextAttribute(hConsole, FOREGROUND_GREEN | FOREGROUND_INTENSITY);
+        if(isHardMode) SetConsoleTextAttribute(hConsole, FOREGROUND_RED | FOREGROUND_INTENSITY);
+        else SetConsoleTextAttribute(hConsole, FOREGROUND_GREEN | FOREGROUND_INTENSITY);
         cout << "\xB2";
     }
     cout << endl;

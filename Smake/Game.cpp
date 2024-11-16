@@ -109,7 +109,7 @@ void SnakeGame::RunGame()
             Draw();
             Input();
             Logic();
-            Sleep(100);
+            Sleep(isHardMode ? 25 : 100);
         }
         _getch();
     }
