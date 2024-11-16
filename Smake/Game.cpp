@@ -1,7 +1,7 @@
 #include <conio.h>
 #include <windows.h>
 #include "iostream"
-
+#include "stdio.h"
 class SnakeGame
 {
 private:
@@ -111,6 +111,7 @@ void SnakeGame::RunGame()
             Logic();
             Sleep(isHardMode ? 25 : 100);
         }
+        Draw(); 
         _getch();
     }
     ShowCursor();

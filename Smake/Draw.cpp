@@ -155,10 +155,12 @@ void SnakeGame::Draw()
     }
     cout << endl;
 
+    SetConsoleTextAttribute(hConsole, FOREGROUND_BLUE | FOREGROUND_GREEN | FOREGROUND_INTENSITY); 
     cout << "Score:" << score << "   High Score:" << highScore << "            " << endl;
     cout << "Press Arrows to move, X to quit" << "          " << endl;
     if (gameOver)
     {
+        SetConsoleTextAttribute(hConsole, FOREGROUND_RED | FOREGROUND_GREEN | FOREGROUND_INTENSITY);
         cout << "Game Over! Press any key to continue." << endl;
     }
 }

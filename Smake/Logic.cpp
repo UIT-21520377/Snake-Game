@@ -73,13 +73,38 @@ void SnakeGame::Logic()
         if (bodyX[i] == headX && bodyY[i] == headY)
             gameOver = true;
 
+    if (isHardMode) {
+        for (int i = 0; i < numBlocks; i++) {
+            if (headX == blockX[i] && headY == blockY[i]) {
+                gameOver = true;
+            }
+        }
+    }
+
+    if (isHardMode && (headX == 0 || headX == width - 1 || headY == 0 || headY == height - 1))
+        gameOver = true;
+
     if (headX == fruitX && headY == fruitY)
     {
         score += 10;
         if (score > highScore)
             highScore = score;
-        fruitX = rand() % width;
-        fruitY = rand() % height;
+       
+        do {
+            fruitX = rand() % width;
+            fruitY = rand() % height;
+
+            // Ensure fruit doesn't overlap with any block
+            bool overlap = false;
+            for (int i = 0; i < numBlocks; i++) {
+                if (fruitX == blockX[i] && fruitY == blockY[i]) {
+                    overlap = true;
+                    break;
+                }
+            }
+            if (!overlap) break;
+
+        } while (true);
         lenSnake++;
     }
 }
