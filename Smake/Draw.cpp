@@ -1,6 +1,36 @@
-#include "SnakeGame.h"
 #include <iostream>
+#include <windows.h>
 
+class SnakeGame
+{
+private:
+    bool gameOver;
+    const int width = 60;
+    const int height = 25;
+    int headX, headY, fruitX, fruitY, score, highScore;
+    int bodyX[100], bodyY[100];
+    int lenSnake;
+    enum eDirection { STOP = 0, LEFT, RIGHT, UP, DOWN };
+    eDirection dir;
+    HANDLE hConsole;
+    bool isHardMode;
+    const int numBlocks = 10;
+    int blockX[10], blockY[10];
+
+public:
+    SnakeGame();
+    void HideCursor();
+    void ShowCursor();
+    void DrawBackground();
+    void DrawStartScreen();
+    void StartGame();
+    void Draw();
+    void Input();
+    void Logic();
+    void RunGame();
+    void ResetGame();
+    void GenerateBlocks();
+};
 using namespace std;
 
 void SnakeGame::DrawBackground()
@@ -43,9 +73,11 @@ void SnakeGame::DrawStartScreen()
     cout << "  ||        Snake Game         ||" << endl;
     cout << "  ================================" << endl;
     cout << "  ||                           ||" << endl;
-    cout << "  ||       Press '1' for        ||" << endl;
-    cout << "  ||        Simple Mode         ||" << endl;
+    cout << "  ||       Press '1' for       ||" << endl;
+    cout << "  ||        Simple Mode        ||" << endl;
     cout << "  ||                           ||" << endl;
+    cout << "  ||       Press '2' for       ||" << endl;
+    cout << "  ||        Hard Mode          ||" << endl;
     cout << "  ================================" << endl;
 }
 
@@ -69,7 +101,7 @@ void SnakeGame::Draw()
                 SetConsoleTextAttribute(hConsole, FOREGROUND_GREEN | FOREGROUND_INTENSITY);
                 cout << "\xB2";
             }
-            if ((i == y && j == x))
+            if ((i == headY && j == headX))
             {
                 SetConsoleTextAttribute(hConsole, FOREGROUND_RED | FOREGROUND_GREEN | FOREGROUND_BLUE | FOREGROUND_INTENSITY); // White head
                 cout << "\xDB";
@@ -81,9 +113,9 @@ void SnakeGame::Draw()
             else
             {
                 bool print = false;
-                for (int k = 0; k < nTail; k++)
+                for (int k = 0; k < lenSnake; k++)
                 {
-                    if (tailX[k] == j && tailY[k] == i)
+                    if (bodyX[k] == j && bodyY[k] == i)
                     {
                         SetConsoleTextAttribute(hConsole, FOREGROUND_INTENSITY);
                         cout << "\xDB";
@@ -109,7 +141,7 @@ void SnakeGame::Draw()
     cout << endl;
 
     cout << "Score:" << score << "   High Score:" << highScore << "            " << endl;
-    cout << "Press W A S D to move, X to quit" << "          " << endl;
+    cout << "Press Arrows to move, X to quit" << "          " << endl;
     if (gameOver)
     {
         cout << "Game Over! Press any key to continue." << endl;
