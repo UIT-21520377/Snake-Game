@@ -7,7 +7,7 @@ void SnakeGame::DrawBackground()
 {
     system("cls");
 
-    SetConsoleTextAttribute(hConsole, FOREGROUND_GREEN);
+    SetConsoleTextAttribute(hConsole, FOREGROUND_RED | FOREGROUND_GREEN | FOREGROUND_BLUE | FOREGROUND_INTENSITY);
     cout << "    ~ S N A K E  G A M E ~    " << endl;
     cout << "       ---_ ......._-_--." << endl;
     cout << "      (|\\ /      / /| \\  \\" << endl;
@@ -36,7 +36,8 @@ void SnakeGame::DrawStartScreen()
 {
     DrawBackground();
 
-    SetConsoleTextAttribute(hConsole, FOREGROUND_BLUE | FOREGROUND_GREEN | FOREGROUND_INTENSITY);
+    SetConsoleTextAttribute(hConsole, FOREGROUND_RED | FOREGROUND_GREEN | FOREGROUND_BLUE | FOREGROUND_INTENSITY); 
+
 
     cout << "  ================================" << endl;
     cout << "  ||        Snake Game         ||" << endl;
@@ -55,23 +56,28 @@ void SnakeGame::Draw()
     pos.Y = 0;
     SetConsoleCursorPosition(hConsole, pos);
 
-    for (int i = 0; i < width + 2; i++)
+    for (int i = 0; i < width + 2; i++) {
+        SetConsoleTextAttribute(hConsole, FOREGROUND_GREEN | FOREGROUND_INTENSITY);
         cout << "\xB2";
+    }
     cout << endl;
 
     for (int i = 0; i < height; i++) {
         for (int j = 0; j < width; j++)
         {
-            if (j == 0)
+            if (j == 0) {
+                SetConsoleTextAttribute(hConsole, FOREGROUND_GREEN | FOREGROUND_INTENSITY);
                 cout << "\xB2";
+            }
             if ((i == y && j == x))
             {
-                SetConsoleTextAttribute(hConsole, FOREGROUND_GREEN | FOREGROUND_INTENSITY);
+                SetConsoleTextAttribute(hConsole, FOREGROUND_RED | FOREGROUND_GREEN | FOREGROUND_BLUE | FOREGROUND_INTENSITY); // White head
                 cout << "\xDB";
-                SetConsoleTextAttribute(hConsole, FOREGROUND_BLUE | FOREGROUND_GREEN | FOREGROUND_INTENSITY);
             }
-            else if (i == fruitY && j == fruitX)
-                cout << "0";
+            else if (i == fruitY && j == fruitX) {
+                SetConsoleTextAttribute(hConsole, FOREGROUND_GREEN | FOREGROUND_INTENSITY);
+                cout << "$";
+            }
             else
             {
                 bool print = false;
@@ -79,7 +85,7 @@ void SnakeGame::Draw()
                 {
                     if (tailX[k] == j && tailY[k] == i)
                     {
-                        SetConsoleTextAttribute(hConsole, FOREGROUND_BLUE | FOREGROUND_GREEN | FOREGROUND_INTENSITY);
+                        SetConsoleTextAttribute(hConsole, FOREGROUND_INTENSITY);
                         cout << "\xDB";
                         print = true;
                     }
@@ -88,14 +94,18 @@ void SnakeGame::Draw()
                     cout << " ";
             }
 
-            if (j == width - 1)
+            if (j == width - 1) {
+                SetConsoleTextAttribute(hConsole, FOREGROUND_GREEN | FOREGROUND_INTENSITY);
                 cout << "\xB2";
+            }
         }
         cout << endl;
     }
 
-    for (int i = 0; i < width + 2; i++)
+    for (int i = 0; i < width + 2; i++) {
+        SetConsoleTextAttribute(hConsole, FOREGROUND_GREEN | FOREGROUND_INTENSITY);
         cout << "\xB2";
+    }
     cout << endl;
 
     cout << "Score:" << score << "   High Score:" << highScore << "            " << endl;
