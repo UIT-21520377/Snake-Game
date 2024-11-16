@@ -1,7 +1,9 @@
-﻿  SnakeGame.cpp
+﻿  Cursor.cpp
+  Logic.cpp
+  SnakeGame.cpp
   Generating code
   7 of 25 functions (28.0%) were compiled, the rest were copied from previous compilation.
-    1 functions were new in current compilation
-    7 functions had inline decision re-evaluated but remain unchanged
+    0 functions were new in current compilation
+    1 functions had inline decision re-evaluated but remain unchanged
   Finished generating code
   Smake.vcxproj -> D:\Code\Snake\Smake\x64\Release\Smake.exe

@@ -1,18 +1,49 @@
-#include "SnakeGame.h"
+#include <windows.h>
+
+class SnakeGame
+{
+private:
+    bool gameOver;
+    const int width = 60;
+    const int height = 25;
+    int headX, headY, fruitX, fruitY, score, highScore;
+    int bodyX[100], bodyY[100];
+    int lenSnake;
+    enum eDirection { STOP = 0, LEFT, RIGHT, UP, DOWN };
+    eDirection dir;
+    HANDLE hConsole;
+    bool isHardMode;
+    const int numBlocks = 10;
+    int blockX[10], blockY[10];
+
+public:
+    SnakeGame();
+    void HideCursor();
+    void ShowCursor();
+    void DrawBackground();
+    void DrawStartScreen();
+    void StartGame();
+    void Draw();
+    void Input();
+    void Logic();
+    void RunGame();
+    void ResetGame();
+    void GenerateBlocks();
+};
 void SnakeGame::Logic()
 {
-    int prevX = tailX[0];
-    int prevY = tailY[0];
+    int prevX = bodyX[0];
+    int prevY = bodyY[0];
     int prev2X, prev2Y;
-    tailX[0] = x;
-    tailY[0] = y;
+    bodyX[0] = headX;
+    bodyY[0] = headY;
 
-    for (int i = 1; i < nTail; i++)
+    for (int i = 1; i < lenSnake; i++)
     {
-        prev2X = tailX[i];
-        prev2Y = tailY[i];
-        tailX[i] = prevX;
-        tailY[i] = prevY;
+        prev2X = bodyX[i];
+        prev2Y = bodyY[i];
+        bodyX[i] = prevX;
+        bodyY[i] = prevY;
         prevX = prev2X;
         prevY = prev2Y;
     }
@@ -20,35 +51,35 @@ void SnakeGame::Logic()
     switch (dir)
     {
     case LEFT:
-        x--;
+        headX--;
         break;
     case RIGHT:
-        x++;
+        headX++;
         break;
     case UP:
-        y--;
+        headY--;
         break;
     case DOWN:
-        y++;
+        headY++;
         break;
     default:
         break;
     }
 
-    if (x >= width) x = 0; else if (x < 0) x = width - 1;
-    if (y >= height) y = 0; else if (y < 0) y = height - 1;
+    if (headX >= width) headX = 0; else if (headX < 0) headX = width - 1;
+    if (headY >= height) headY = 0; else if (headY < 0) headY = height - 1;
 
-    for (int i = 0; i < nTail; i++)
-        if (tailX[i] == x && tailY[i] == y)
+    for (int i = 0; i < lenSnake; i++)
+        if (bodyX[i] == headX && bodyY[i] == headY)
             gameOver = true;
 
-    if (x == fruitX && y == fruitY)
+    if (headX == fruitX && headY == fruitY)
     {
         score += 10;
         if (score > highScore)
             highScore = score;
         fruitX = rand() % width;
         fruitY = rand() % height;
-        nTail++;
+        lenSnake++;
     }
 }

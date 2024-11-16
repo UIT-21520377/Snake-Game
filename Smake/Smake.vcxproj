@@ -127,23 +127,13 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\TestSnake\Cursor.cpp">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</ExcludedFromBuild>
-    </ClCompile>
-    <ClCompile Include="..\..\TestSnake\Game.cpp">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</ExcludedFromBuild>
-    </ClCompile>
-    <ClCompile Include="..\..\TestSnake\Input.cpp">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</ExcludedFromBuild>
-    </ClCompile>
-    <ClCompile Include="..\..\TestSnake\Logic.cpp">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</ExcludedFromBuild>
-    </ClCompile>
-    <ClCompile Include="..\..\TestSnake\SnakeGame.cpp">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</ExcludedFromBuild>
-    </ClCompile>
+    <ClCompile Include="Cursor.cpp" />
     <ClCompile Include="Draw.cpp" />
+    <ClCompile Include="Game.cpp" />
+    <ClCompile Include="Input.cpp" />
+    <ClCompile Include="Logic.cpp" />
     <ClCompile Include="Main.cpp" />
+    <ClCompile Include="SnakeGame.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="SnakeGame.h" />
