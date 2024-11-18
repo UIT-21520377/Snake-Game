@@ -1,6 +1,6 @@
 #include "Header.h"
 
-void SnakeGame::HideCursor()
+void Snake::HideCursor()
 {
     CONSOLE_CURSOR_INFO info;
     info.dwSize = 100;
@@ -8,7 +8,7 @@ void SnakeGame::HideCursor()
     SetConsoleCursorInfo(hConsole, &info);
 }
 
-void SnakeGame::ShowCursor()
+void Snake::ShowCursor()
 {
     CONSOLE_CURSOR_INFO info;
     info.dwSize = 10;

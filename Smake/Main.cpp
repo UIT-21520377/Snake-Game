@@ -3,7 +3,7 @@
 
 int main() {
     srand(static_cast<unsigned>(time(nullptr)));
-    SnakeGame game;
-    game.RunGame();
+    Snake game;
+    game.Run();
     return 0;
 }

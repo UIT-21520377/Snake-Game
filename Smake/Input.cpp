@@ -2,7 +2,7 @@
 #include "Header.h"
 
 
-void SnakeGame::Input()
+void Snake::Keyboard()
 {
     if (_kbhit()) {
         switch (_getch()) {

@@ -1,32 +1,34 @@
 #include <windows.h>
 
-class SnakeGame
+class Snake
 {
 private:
-    bool gameOver;
-    const int width = 60;
-    const int height = 25;
-    int headX, headY, fruitX, fruitY, score, highScore;
-    int bodyX[100], bodyY[100];
-    int lenSnake;
-    enum eDirection { STOP = 0, LEFT, RIGHT, UP, DOWN };
-    eDirection dir;
-    HANDLE hConsole;
     bool isHardMode;
     const int numBlocks = 10;
     int blockX[10], blockY[10];
+    int headX, headY;
+    int bodyX[100], bodyY[100];
+    int lenSnake;
+    int dollarX, dollarY;
+    int score, highScore;
+    enum eDirection { STOP = 0, LEFT, RIGHT, UP, DOWN };
+    eDirection dir;
+    HANDLE hConsole;
+    bool gameOver;
+    const int width = 60;
+    const int height = 25;
 
 public:
-    SnakeGame();
+    Snake();
     void HideCursor();
     void ShowCursor();
-    void DrawBackground();
-    void DrawStartScreen();
-    void StartGame();
+    void Rules();
+    void MainScreen();
     void Draw();
-    void Input();
+    void Keyboard();
     void Logic();
-    void RunGame();
-    void ResetGame();
+    void Start();
+    void Run();
+    void Reset();
     void GenerateBlocks();
 };

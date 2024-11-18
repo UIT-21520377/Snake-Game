@@ -3,38 +3,32 @@
 
 using namespace std;
 
-void SnakeGame::DrawBackground()
+void Snake::Rules()
 {
     system("cls");
 
-    SetConsoleTextAttribute(hConsole, FOREGROUND_RED | FOREGROUND_GREEN | FOREGROUND_BLUE | FOREGROUND_INTENSITY);
-    cout << "    ~ S N A K E  G A M E ~    " << endl;
-    cout << "       ---_ ......._-_--." << endl;
-    cout << "      (|\\ /      / /| \\  \\" << endl;
-    cout << "      /  /     .'  -=-'   `." << endl;
-    cout << "     /  /    .'             )" << endl;
-    cout << "   _/  /   .'        _.)   /" << endl;
-    cout << "  / o   o        _.-' /  .'" << endl;
-    cout << "  \\          _.-'    / .'*|" << endl;
-    cout << "   \\______.-'//    .'.' \\*|" << endl;
-    cout << "    \\|  \\ | //   .'.' _ |*|" << endl;
-    cout << "     `   \\|//  .'.'_ _ _|*|" << endl;
-    cout << "      .  .// .'.' | _ _ \\*|" << endl;
-    cout << "      \\`-|\\_/ /    \\ _ _ \\*\\" << endl;
-    cout << "       `/'\\__/      \\ _ _ \\*\\" << endl;
-    cout << "      /^|            \\ _ _ \\*" << endl;
-    cout << "     '  `             \\ _ _ \\     " << endl;
-    cout << "                       \\_" << endl;
-    cout << " ..   ..  ..   ..  .. ______  ______                      " << endl;
-    cout << " ||   ||  |\\\\  ||  || ------ |/                   " << endl;
-    cout << " ||   ||  ||\\\\ ||  ||   ||   |______             " << endl;
-    cout << " ||   ||  || \\\\||  ||   ||   ||             " << endl;
-    cout << " \\====//  ||  \\||  ||   ||   |\\_____          " << endl;
+    SetConsoleTextAttribute(hConsole, FOREGROUND_GREEN | FOREGROUND_INTENSITY); 
+    cout << "SIMPLE MODE:" << endl;
+    SetConsoleTextAttribute(hConsole, FOREGROUND_RED | FOREGROUND_GREEN | FOREGROUND_BLUE | FOREGROUND_INTENSITY); 
+    cout << " - The speed of the snake is slow." << endl;
+    cout << " - There are no obstacles." << endl;
+    cout << " - You can move through the boundaries (no collisions)." << endl;
+
+    cout << endl; 
+
+    SetConsoleTextAttribute(hConsole, FOREGROUND_RED | FOREGROUND_INTENSITY); 
+    cout << "HARD MODE:" << endl;
+    SetConsoleTextAttribute(hConsole, FOREGROUND_RED | FOREGROUND_GREEN | FOREGROUND_BLUE | FOREGROUND_INTENSITY); 
+    cout << " - The speed of the snake is much faster." << endl;
+    cout << " - There are obstacles you must avoid." << endl;
+    cout << " - You cannot touch the boundaries (collisions end the game)." << endl;
+
+    cout << endl; 
 }
 
-void SnakeGame::DrawStartScreen()
+void Snake::MainScreen()
 {
-    DrawBackground();
+    Rules();
 
     SetConsoleTextAttribute(hConsole, FOREGROUND_RED | FOREGROUND_GREEN | FOREGROUND_BLUE | FOREGROUND_INTENSITY); 
 
@@ -44,14 +38,25 @@ void SnakeGame::DrawStartScreen()
     cout << "  ================================" << endl;
     cout << "  ||                           ||" << endl;
     cout << "  ||       Press '1' for       ||" << endl;
-    cout << "  ||        Simple Mode        ||" << endl;
+    cout << "  ||        ";
+    SetConsoleTextAttribute(hConsole, FOREGROUND_GREEN | FOREGROUND_INTENSITY);
+    cout << "SIMPLE MODE";
+    SetConsoleTextAttribute(hConsole, FOREGROUND_RED | FOREGROUND_GREEN | FOREGROUND_BLUE | FOREGROUND_INTENSITY);
+    cout << "        ||" << endl;
+    cout << "  ||                           ||" << endl;
+    cout << "  ================================" << endl;
     cout << "  ||                           ||" << endl;
     cout << "  ||       Press '2' for       ||" << endl;
-    cout << "  ||        Hard Mode          ||" << endl;
+    cout << "  ||        ";
+    SetConsoleTextAttribute(hConsole, FOREGROUND_RED | FOREGROUND_INTENSITY);
+    cout << "HARD MODE";
+    SetConsoleTextAttribute(hConsole, FOREGROUND_RED | FOREGROUND_GREEN | FOREGROUND_BLUE | FOREGROUND_INTENSITY);
+    cout << "          ||" << endl;
+    cout << "  ||                           ||" << endl;
     cout << "  ================================" << endl;
 }
 
-void SnakeGame::Draw()
+void Snake::Draw()
 {
     COORD pos;
     pos.X = 0;
@@ -78,7 +83,7 @@ void SnakeGame::Draw()
                 SetConsoleTextAttribute(hConsole, FOREGROUND_RED | FOREGROUND_GREEN | FOREGROUND_BLUE | FOREGROUND_INTENSITY); // White head
                 cout << "\xDB";
             }
-            else if (i == fruitY && j == fruitX) {
+            else if (i == dollarY && j == dollarX) {
                 SetConsoleTextAttribute(hConsole, FOREGROUND_GREEN | FOREGROUND_INTENSITY);
                 cout << "$";
             }

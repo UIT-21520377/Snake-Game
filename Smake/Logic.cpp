@@ -1,5 +1,5 @@
 #include "Header.h"
-void SnakeGame::Logic()
+void Snake::Logic()
 {
     int prevX = bodyX[0];
     int prevY = bodyY[0];
@@ -53,20 +53,20 @@ void SnakeGame::Logic()
     if (isHardMode && (headX == 0 || headX == width - 1 || headY == 0 || headY == height - 1))
         gameOver = true;
 
-    if (headX == fruitX && headY == fruitY)
+    if (headX == dollarX && headY == dollarY)
     {
         score += 10;
         if (score > highScore)
             highScore = score;
        
         do {
-            fruitX = rand() % width;
-            fruitY = rand() % height;
+            dollarX = rand() % width;
+            dollarY = rand() % height;
 
             // Ensure fruit doesn't overlap with any block
             bool overlap = false;
             for (int i = 0; i < numBlocks; i++) {
-                if (fruitX == blockX[i] && fruitY == blockY[i]) {
+                if (dollarX == blockX[i] && dollarY == blockY[i]) {
                     overlap = true;
                     break;
                 }

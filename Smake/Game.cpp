@@ -4,19 +4,19 @@
 #include "stdio.h"
 #include "Header.h"
 
-void SnakeGame::StartGame() {
-    DrawStartScreen();
+void Snake::Start() {
+    MainScreen();
     char startKey = _getch();
     if (startKey == '1') {
         isHardMode = false;
         gameOver = false;
-        ResetGame();
+        Reset();
     }
     else if (startKey == '2') {
         isHardMode = true;
         GenerateBlocks();
         gameOver = false;
-        ResetGame();
+        Reset();
     }
     else {
         gameOver = true;
@@ -35,20 +35,20 @@ void SnakeGame::StartGame() {
     fruitY = rand() % height;
 }
 */
-void SnakeGame::ResetGame() {
+void Snake::Reset() {
     score = 0;
     headX = width / 2;
     headY = height / 2;
     lenSnake = 0;
 
     do {
-        fruitX = rand() % width;
-        fruitY = rand() % height;
+        dollarX = rand() % width;
+        dollarY = rand() % height;
 
         // Ensure fruit doesn't overlap with any block
         bool overlap = false;
         for (int i = 0; i < numBlocks; i++) {
-            if (fruitX == blockX[i] && fruitY == blockY[i]) {
+            if (dollarX == blockX[i] && dollarY == blockY[i]) {
                 overlap = true;
                 break;
             }
@@ -58,15 +58,15 @@ void SnakeGame::ResetGame() {
     } while (true);
 }
 
-void SnakeGame::RunGame()
+void Snake::Run()
 {
     while (true)
     {
-        StartGame();
+        Start();
         while (!gameOver)
         {
             Draw();
-            Input();
+            Keyboard();
             Logic();
             Sleep(isHardMode ? 25 : 100);
         }
