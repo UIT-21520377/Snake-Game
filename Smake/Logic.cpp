@@ -1,21 +1,11 @@
 #include "Header.h"
 void Snake::Logic()
 {
-    int prevX = bodyX[0];
-    int prevY = bodyY[0];
-    int prev2X, prev2Y;
-    bodyX[0] = headX;
-    bodyY[0] = headY;
-
-    for (int i = 1; i < lenSnake; i++)
-    {
-        prev2X = bodyX[i];
-        prev2Y = bodyY[i];
-        bodyX[i] = prevX;
-        bodyY[i] = prevY;
-        prevX = prev2X;
-        prevY = prev2Y;
+    for (int i = lenSnake - 1; i >= 1; i--) {
+        bodyX[i] = bodyX[i - 1]; 
+        bodyY[i] = bodyY[i - 1];
     }
+    bodyX[0] = headX; bodyY[0] = headY; 
 
     switch (dir)
     {
