@@ -4,6 +4,7 @@
 
 void Snake::Keyboard()
 {
+    // Kiểm tra nếu có phím được nhấn.
     if (_kbhit()) {
         switch (_getch()) {
         case 'a': // Left arrow key
