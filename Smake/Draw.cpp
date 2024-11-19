@@ -78,7 +78,7 @@ void Snake::MainScreen()
 
 void Snake::Draw()
 {
-    COORD pos = { 0, 0 };
+    COORD pos = { 0, 0 };// Vị trí bắt đầu hiển thị ở góc trên trái.
     SetConsoleCursorPosition(hConsole, pos);
 
     for (int i = 0; i < width + 2; i++) {
