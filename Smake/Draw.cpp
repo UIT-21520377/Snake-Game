@@ -84,7 +84,7 @@ void Snake::Draw()
     for (int i = 0; i < width + 2; i++) {
         if (isHardMode) SetConsoleTextAttribute(hConsole, FOREGROUND_RED | FOREGROUND_INTENSITY);
         else SetConsoleTextAttribute(hConsole, FOREGROUND_GREEN | FOREGROUND_INTENSITY);
-        cout << "\xB2";
+        cout << "\xB2";// Ký tự đường viền.
     }
     cout << endl;
 
