@@ -29,7 +29,22 @@ void Snake::Rules()
 void Snake::MainScreen()
 {
     Rules();
-
+    cout << "              /^\\               \n";
+    cout << "             /   \\              \n";
+    cout << "        ____/_____\\____         \n";
+    cout << "       /              \\         \n";
+    cout << "      /  \\   O   O   / \\        \n";
+    cout << "     |    \\    ^    /   |       \n";
+    cout << "      \\    \\_______/   /        \n";
+    cout << "       \\                /        \n";
+    cout << "        \\___/~~~~~\\___/         \n";
+    cout << "          /           \\          \n";
+    cout << "         /             \\         \n";
+    cout << "     ___/               \\___     \n";
+    cout << "    /                       \\    \n";
+    cout << "   /                         \\   \n";
+    cout << "  /                           \\  \n";
+    cout << " ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ \n";
     SetConsoleTextAttribute(hConsole, FOREGROUND_RED | FOREGROUND_GREEN | FOREGROUND_BLUE | FOREGROUND_INTENSITY); 
 
 
