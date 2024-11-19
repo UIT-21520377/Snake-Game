@@ -18,14 +18,14 @@ void Snake::Keyboard()
             break;
         case 'w':     // Nhấn phím 'w' để di chuyển lên trên.
             if (dir != DOWN)
-                dir = UP;    // Không cho phép quay ngược.
+                dir = UP;       // Không cho phép quay ngược.
             break;
         case 's':     // Nhấn phím 's' để di chuyển xuống dưới.
             if (dir != UP)
-                dir = DOWN;
+                dir = DOWN;     // Không cho phép quay ngược.
             break;
         case 'x':    // Nhấn phím 'x' để thoát trò chơi.
-            gameOver = true;     // Đặt trạng thái "kết thúc trò chơi".
+            gameOver = true;    // Đặt trạng thái "kết thúc trò chơi".
             break;
         }
     }
