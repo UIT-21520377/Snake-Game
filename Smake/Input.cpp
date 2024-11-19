@@ -10,7 +10,7 @@ void Snake::Keyboard()
         switch (_getch()) {
         case 'a': // Nhấn phím 'a' để di chuyển sang trái.
             if (dir != RIGHT)
-                dir = LEFT;
+                dir = LEFT;    // Đảm bảo không thể quay ngược 180 độ.
             break;
         case 'd': // Right arrow key
             if (dir != LEFT)
