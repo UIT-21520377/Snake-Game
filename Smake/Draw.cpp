@@ -29,6 +29,7 @@ void Snake::Rules()
 void Snake::MainScreen()
 {
     Rules();// Gọi hàm hiển thị quy tắc chơi.
+    
     // In ra hình minh họa rắn (một chú rắn vẽ ASCII).
    cout << "              /^\\               \n";
    cout << "             /   \\              \n";
@@ -46,6 +47,7 @@ void Snake::MainScreen()
    cout << "   /                         \\   \n";
    cout << "  /                           \\  \n";
    cout << " ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ \n";
+    
     // Hiển thị menu chính với các tùy chọn chơi.
     SetConsoleTextAttribute(hConsole, FOREGROUND_RED | FOREGROUND_GREEN | FOREGROUND_BLUE | FOREGROUND_INTENSITY); 
     cout << "  ================================" << endl;
@@ -54,6 +56,8 @@ void Snake::MainScreen()
     cout << "  ||                           ||" << endl;
     cout << "  ||       Press '1' for       ||" << endl;
     cout << "  ||        ";
+    
+    // Thay đổi màu chữ để nổi bật "SIMPLE MODE".
     SetConsoleTextAttribute(hConsole, FOREGROUND_GREEN | FOREGROUND_INTENSITY);
     cout << "SIMPLE MODE";
     SetConsoleTextAttribute(hConsole, FOREGROUND_RED | FOREGROUND_GREEN | FOREGROUND_BLUE | FOREGROUND_INTENSITY);
