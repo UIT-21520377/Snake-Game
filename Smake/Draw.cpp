@@ -97,6 +97,7 @@ void Snake::Draw()
                 else SetConsoleTextAttribute(hConsole, FOREGROUND_GREEN | FOREGROUND_INTENSITY);
                 cout << "\xB2";
             }
+            // Hiển thị đầu rắn
             if ((i == headY && j == headX))
             {
                 SetConsoleTextAttribute(hConsole, FOREGROUND_RED | FOREGROUND_GREEN | FOREGROUND_BLUE | FOREGROUND_INTENSITY); // White head
