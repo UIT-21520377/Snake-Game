@@ -151,7 +151,7 @@ void Snake::Draw()
         cout << "\xB2";
     }
     cout << endl;
-
+     // Hiển thị điểm và hướng dẫn chơi.
     SetConsoleTextAttribute(hConsole, FOREGROUND_BLUE | FOREGROUND_GREEN | FOREGROUND_INTENSITY); 
     cout << "Score:" << score << "   High Score:" << highScore << "            " << endl;
     cout << "Press W A S D to move, X to quit" << "          " << endl;
