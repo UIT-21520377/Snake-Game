@@ -80,7 +80,7 @@ void Snake::Draw()
 {
     COORD pos = { 0, 0 };// Vị trí bắt đầu hiển thị ở góc trên trái.
     SetConsoleCursorPosition(hConsole, pos);// Đặt lại con trỏ về vị trí ban đầu.
-
+    // Vẽ đường viền trên cùng.
     for (int i = 0; i < width + 2; i++) {
         if (isHardMode) SetConsoleTextAttribute(hConsole, FOREGROUND_RED | FOREGROUND_INTENSITY);
         else SetConsoleTextAttribute(hConsole, FOREGROUND_GREEN | FOREGROUND_INTENSITY);
