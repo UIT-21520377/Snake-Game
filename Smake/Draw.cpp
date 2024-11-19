@@ -111,6 +111,7 @@ void Snake::Draw()
             else
             {
                 bool print = false;
+                // Hiển thị thân rắn.
                 for (int k = 0; k < lenSnake; k++)
                 {
                     if (bodyX[k] == j && bodyY[k] == i)
