@@ -1,3 +1,6 @@
+#include <conio.h>
+#include "Header.h"
+
 void Snake::Run() {
     MainScreen();
     char choice = _getch();
