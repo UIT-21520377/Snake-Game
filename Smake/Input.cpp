@@ -12,7 +12,7 @@ void Snake::Keyboard()
             if (dir != RIGHT)
                 dir = LEFT;    // Đảm bảo không thể quay ngược 180 độ.
             break;
-        case 'd': // Right arrow key
+        case 'd': // Nhấn phím 'd' để di chuyển sang phải
             if (dir != LEFT)
                 dir = RIGHT;
             break;
