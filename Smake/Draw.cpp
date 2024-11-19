@@ -155,6 +155,7 @@ void Snake::Draw()
     SetConsoleTextAttribute(hConsole, FOREGROUND_BLUE | FOREGROUND_GREEN | FOREGROUND_INTENSITY); 
     cout << "Score:" << score << "   High Score:" << highScore << "            " << endl;
     cout << "Press W A S D to move, X to quit" << "          " << endl;
+    // Nếu kết thúc trò chơi, hiển thị thông báo.
     if (gameOver)
     {
         SetConsoleTextAttribute(hConsole, FOREGROUND_RED | FOREGROUND_GREEN | FOREGROUND_INTENSITY);
