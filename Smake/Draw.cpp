@@ -58,9 +58,7 @@ void Snake::MainScreen()
 
 void Snake::Draw()
 {
-    COORD pos;
-    pos.X = 0;
-    pos.Y = 0;
+    COORD pos = { 0, 0 };
     SetConsoleCursorPosition(hConsole, pos);
 
     for (int i = 0; i < width + 2; i++) {
