@@ -67,6 +67,7 @@ void Snake::MainScreen()
     cout << "  ||                           ||" << endl;
     cout << "  ||       Press '2' for       ||" << endl;
     cout << "  ||        ";
+     // Thay đổi màu chữ để nổi bật "HARD MODE"
     SetConsoleTextAttribute(hConsole, FOREGROUND_RED | FOREGROUND_INTENSITY);
     cout << "HARD MODE";
     SetConsoleTextAttribute(hConsole, FOREGROUND_RED | FOREGROUND_GREEN | FOREGROUND_BLUE | FOREGROUND_INTENSITY);
