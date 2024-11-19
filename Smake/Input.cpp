@@ -14,7 +14,7 @@ void Snake::Keyboard()
             break;
         case 'd': // Nhấn phím 'd' để di chuyển sang phải
             if (dir != LEFT)
-                dir = RIGHT;
+                dir = RIGHT;    // Không cho phép quay ngược.
             break;
         case 'w': // Up arrow key
             if (dir != DOWN)
