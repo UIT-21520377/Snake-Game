@@ -121,7 +121,7 @@ void Snake::Draw()
                         print = true;
                     }
                 }
-                
+                // Hiển thị chướng ngại vật (nếu ở chế độ khó).
                 if (!print && isHardMode) {
                     for (int b = 0; b < numBlocks; b++) {
                         if (blockX[b] == j && blockY[b] == i) {
