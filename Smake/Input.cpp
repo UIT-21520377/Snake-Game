@@ -25,7 +25,7 @@ void Snake::Keyboard()
                 dir = DOWN;
             break;
         case 'x':    // Nhấn phím 'x' để thoát trò chơi.
-            gameOver = true;
+            gameOver = true;     // Đặt trạng thái "kết thúc trò chơi".
             break;
         }
     }
