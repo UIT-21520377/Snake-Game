@@ -6,6 +6,7 @@ void Snake::Keyboard()
 {
     // Kiểm tra nếu có phím được nhấn.
     if (_kbhit()) {
+        // Đọc ký tự từ bàn phím mà không cần chờ (blocking).
         switch (_getch()) {
         case 'a': // Left arrow key
             if (dir != RIGHT)
