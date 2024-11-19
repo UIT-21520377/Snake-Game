@@ -103,6 +103,7 @@ void Snake::Draw()
                 SetConsoleTextAttribute(hConsole, FOREGROUND_RED | FOREGROUND_GREEN | FOREGROUND_BLUE | FOREGROUND_INTENSITY); // White head
                 cout << "\xDB";
             }
+            // Hiển thị thức ăn.    
             else if (i == dollarY && j == dollarX) {
                 SetConsoleTextAttribute(hConsole, FOREGROUND_GREEN | FOREGROUND_INTENSITY);
                 cout << "$";
