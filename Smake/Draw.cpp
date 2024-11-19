@@ -87,7 +87,7 @@ void Snake::Draw()
         cout << "\xB2";// Ký tự đường viền.
     }
     cout << endl;
-
+    // Vẽ khu vực chơi chính.
     for (int i = 0; i < height; i++) {
         for (int j = 0; j < width; j++)
         {
