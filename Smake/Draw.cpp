@@ -131,11 +131,11 @@ void Snake::Draw()
                         }
                     }
                 }
-         
+                 // Nếu không có gì để vẽ, in khoảng trống.
                 if (!print)
                     cout << " ";
             }
-
+               // Vẽ đường viền bên phải.
             if (j == width - 1) {
                 if (isHardMode) SetConsoleTextAttribute(hConsole, FOREGROUND_RED | FOREGROUND_INTENSITY);
                 else SetConsoleTextAttribute(hConsole, FOREGROUND_GREEN | FOREGROUND_INTENSITY);
