@@ -8,7 +8,7 @@ void Snake::Keyboard()
     if (_kbhit()) {
         // Đọc ký tự từ bàn phím mà không cần chờ (blocking).
         switch (_getch()) {
-        case 'a': // Left arrow key
+        case 'a': // Nhấn phím 'a' để di chuyển sang trái.
             if (dir != RIGHT)
                 dir = LEFT;
             break;
