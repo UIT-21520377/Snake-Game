@@ -20,7 +20,7 @@ void Snake::Keyboard()
             if (dir != DOWN)
                 dir = UP;
             break;
-        case 's': // Down arrow key
+        case 's':  // Nhấn phím 's' để di chuyển xuống dưới.
             if (dir != UP)
                 dir = DOWN;
             break;
