@@ -37,7 +37,7 @@ void Snake::Start() {
 */
 // Hàm Reset: Đặt lại các thông số của trò chơi về trạng thái ban đầu.
 void Snake::Reset() {
-    score = 0;
+    score = 0;                    // Đặt điểm số về 0.
     headX = width / 2;
     headY = height / 2;
     lenSnake = 0;
