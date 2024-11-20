@@ -58,21 +58,21 @@ void Snake::Reset() {
 
     } while (true);
 }
-
+// Hàm Run: Vòng lặp chính của trò chơi.
 void Snake::Run()
 {
-    while (true)
+    while (true)               // Vòng lặp chính (trò chơi chạy liên tục cho đến khi người dùng thoát).
     {
-        Start();
-        while (!gameOver)
+        Start();               // Bắt đầu trò chơi (hiển thị menu và chọn chế độ).
+        while (!gameOver)      // Chạy trò chơi khi chưa kết thúc.
         {
-            Draw();
-            Keyboard();
-            Logic();
-            Sleep(isHardMode ? 25 : 100);
+            Draw();            // Vẽ giao diện trò chơi.
+            Keyboard();        // Xử lý thao tác phím bấm của người dùng.
+            Logic();           // Cập nhật logic trò chơi (di chuyển rắn, kiểm tra va chạm,...).
+            Sleep(isHardMode ? 25 : 100);        // Điều chỉnh tốc độ dựa trên chế độ (nhanh hoặc chậm).
         }
-        Draw(); 
-        _getch();
+        Draw();                 // Hiển thị khung cuối cùng khi trò chơi kết thúc.
+        _getch();               // Đợi người dùng nhấn phím trước khi tiếp tục.
     }
-    ShowCursor();
+    ShowCursor();               // Hiển thị lại con trỏ chuột (nếu trước đó đã ẩn).
 }
