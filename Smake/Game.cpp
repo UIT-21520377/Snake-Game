@@ -5,12 +5,12 @@
 #include "Header.h"
 // Hàm Start: Xử lý logic bắt đầu trò chơi.
 void Snake::Start() {
-    MainScreen();                 // Hiển thị màn hình chính (menu chọn chế độ).
+    MainScreen();                // Hiển thị màn hình chính (menu chọn chế độ).
     char startKey = _getch();    // Đợi người dùng nhấn phím.
     if (startKey == '1') {       // Nếu người dùng chọn chế độ "Simple Mode".
         isHardMode = false;      // Đặt chế độ đơn giản (không có chướng ngại vật, tốc độ chậm).
-        gameOver = false;         // Trò chơi chưa kết thúc.
-        Reset();
+        gameOver = false;        // Trò chơi chưa kết thúc.
+        Reset();                 // Thiết lập lại trạng thái ban đầu của trò chơi.
     }
     else if (startKey == '2') {
         isHardMode = true;
