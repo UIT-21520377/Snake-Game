@@ -9,7 +9,7 @@ void Snake::Start() {
     char startKey = _getch();    // Đợi người dùng nhấn phím.
     if (startKey == '1') {       // Nếu người dùng chọn chế độ "Simple Mode".
         isHardMode = false;      // Đặt chế độ đơn giản (không có chướng ngại vật, tốc độ chậm).
-        gameOver = false;
+        gameOver = false;         // Trò chơi chưa kết thúc.
         Reset();
     }
     else if (startKey == '2') {
