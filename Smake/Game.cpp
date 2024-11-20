@@ -12,7 +12,7 @@ void Snake::Start() {
         gameOver = false;        // Trò chơi chưa kết thúc.
         Reset();                 // Thiết lập lại trạng thái ban đầu của trò chơi.
     }
-    else if (startKey == '2') {
+    else if (startKey == '2') {  // Nếu người dùng chọn chế độ "Hard Mode".
         isHardMode = true;
         GenerateBlocks();
         gameOver = false;
