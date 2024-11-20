@@ -20,6 +20,7 @@ void Snake::Rules()
     // Đặt màu chữ thành màu đỏ sáng và in tiêu đề cho chế độ khó.
     SetConsoleTextAttribute(hConsole, FOREGROUND_RED | FOREGROUND_INTENSITY); 
     cout << "HARD MODE:" << endl;
+    // Đặt lại màu chữ thành màu mặc định (trắng sáng) và mô tả các quy tắc của chế độ khó.
     SetConsoleTextAttribute(hConsole, FOREGROUND_RED | FOREGROUND_GREEN | FOREGROUND_BLUE | FOREGROUND_INTENSITY); 
     cout << " - The speed of the snake is much faster." << endl;
     cout << " - There are obstacles you must avoid." << endl;
