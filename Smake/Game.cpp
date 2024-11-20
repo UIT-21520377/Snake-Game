@@ -16,7 +16,7 @@ void Snake::Start() {
         isHardMode = true;       // Đặt chế độ khó (có chướng ngại vật, tốc độ nhanh).
         GenerateBlocks();        // Sinh các chướng ngại vật.
         gameOver = false;        // Trò chơi chưa kết thúc.
-        Reset();
+        Reset();                 // Thiết lập lại trạng thái ban đầu của trò chơi.
     }
     else {
         gameOver = true;
