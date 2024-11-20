@@ -35,6 +35,7 @@ void Snake::Start() {
     fruitY = rand() % height;
 }
 */
+// Hàm Reset: Đặt lại các thông số của trò chơi về trạng thái ban đầu.
 void Snake::Reset() {
     score = 0;
     headX = width / 2;
