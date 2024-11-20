@@ -31,12 +31,12 @@ void Snake::MainScreen()
     Rules();// Gọi hàm hiển thị quy tắc chơi .
     
     // In ra hình minh họa rắn (một chú rắn vẽ ASCII).
-   cout << "              /^\\               \n";
-   cout << "             /   \\              \n";
-   cout << "        ____/_____\\____         \n";
-   cout << "       /              \\         \n";
+   cout << "              /^\\                \n";
+   cout << "             /   \\               \n";
+   cout << "        ____/_____\\____          \n";
+   cout << "       /              \\          \n";
    cout << "      /  \\   O   O   / \\        \n";
-   cout << "     |    \\    ^    /   |       \n";
+   cout << "     |    \\    ^    /   |        \n";
    cout << "      \\    \\_______/   /        \n";
    cout << "       \\                /        \n";
    cout << "        \\___/-----\\___/         \n";
