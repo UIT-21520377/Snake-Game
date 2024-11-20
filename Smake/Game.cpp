@@ -43,7 +43,7 @@ void Snake::Reset() {
     lenSnake = 0;                 // Đặt chiều dài ban đầu của rắn về 0.
 
     do {
-        dollarX = rand() % width;
+        dollarX = rand() % width;   // Sinh vị trí ngẫu nhiên cho "đồng tiền" theo chiều ngang.
         dollarY = rand() % height;
 
         // Ensure fruit doesn't overlap with any block
