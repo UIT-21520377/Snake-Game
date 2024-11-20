@@ -16,7 +16,7 @@ void Snake::Rules()
     cout << " - There are no obstacles." << endl;
     cout << " - You can move through the boundaries (no collisions)." << endl;
 
-    cout << endl; 
+    cout << endl; // Tạo khoảng cách giữa hai chế độ.
 
     SetConsoleTextAttribute(hConsole, FOREGROUND_RED | FOREGROUND_INTENSITY); 
     cout << "HARD MODE:" << endl;
