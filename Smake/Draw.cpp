@@ -45,7 +45,7 @@ void Snake::MainScreen()
    cout << "     ___/               \\___     \n";
    cout << "    /                       \\    \n";
    cout << "   /                         \\   \n";
-   cout << "  /                           \\  \n";
+   cout<< "  /                           \\  \n";
    cout<< " --------~~~~~~~~~~~~~~~~-------- \n";
     
     // Hiển thị menu chính với các tùy chọn chơi.
