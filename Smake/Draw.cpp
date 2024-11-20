@@ -7,9 +7,10 @@ void Snake::Rules()
 {
     // Xóa màn hình console, chuẩn bị hiển thị nội dung mới.
     system("cls");
-
+    // Đặt màu chữ thành màu xanh lá cây sáng và in tiêu đề cho chế độ đơn giản.
     SetConsoleTextAttribute(hConsole, FOREGROUND_GREEN | FOREGROUND_INTENSITY); 
     cout << "SIMPLE MODE:" << endl;
+    
     SetConsoleTextAttribute(hConsole, FOREGROUND_RED | FOREGROUND_GREEN | FOREGROUND_BLUE | FOREGROUND_INTENSITY); 
     cout << " - The speed of the snake is slow." << endl;
     cout << " - There are no obstacles." << endl;
