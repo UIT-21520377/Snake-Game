@@ -3,7 +3,7 @@
 #include "iostream"
 #include "stdio.h"
 #include "Header.h"
-
+// Hàm Start: Xử lý logic bắt đầu trò chơi.
 void Snake::Start() {
     MainScreen();
     char startKey = _getch();
