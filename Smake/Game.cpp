@@ -44,7 +44,7 @@ void Snake::Reset() {
 
     do {
         dollarX = rand() % width;   // Sinh vị trí ngẫu nhiên cho "đồng tiền" theo chiều ngang.
-        dollarY = rand() % height;
+        dollarY = rand() % height;  // Sinh vị trí ngẫu nhiên cho "đồng tiền" theo chiều dọc.
 
         // Ensure fruit doesn't overlap with any block
         bool overlap = false;
