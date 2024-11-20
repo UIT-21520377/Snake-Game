@@ -7,7 +7,7 @@
 void Snake::Start() {
     MainScreen();                 // Hiển thị màn hình chính (menu chọn chế độ).
     char startKey = _getch();    // Đợi người dùng nhấn phím.
-    if (startKey == '1') {
+    if (startKey == '1') {       // Nếu người dùng chọn chế độ "Simple Mode".
         isHardMode = false;
         gameOver = false;
         Reset();
