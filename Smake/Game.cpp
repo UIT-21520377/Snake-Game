@@ -39,7 +39,7 @@ void Snake::Start() {
 void Snake::Reset() {
     score = 0;                    // Đặt điểm số về 0.
     headX = width / 2;            // Đặt vị trí đầu rắn vào giữa màn hình (theo chiều ngang).
-    headY = height / 2;
+    headY = height / 2;           // Đặt vị trí đầu rắn vào giữa màn hình (theo chiều dọc).
     lenSnake = 0;
 
     do {
