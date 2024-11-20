@@ -40,7 +40,7 @@ void Snake::Reset() {
     score = 0;                    // Đặt điểm số về 0.
     headX = width / 2;            // Đặt vị trí đầu rắn vào giữa màn hình (theo chiều ngang).
     headY = height / 2;           // Đặt vị trí đầu rắn vào giữa màn hình (theo chiều dọc).
-    lenSnake = 0;
+    lenSnake = 0;                 // Đặt chiều dài ban đầu của rắn về 0.
 
     do {
         dollarX = rand() % width;
