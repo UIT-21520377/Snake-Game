@@ -5,8 +5,8 @@
 #include "Header.h"
 // Hàm Start: Xử lý logic bắt đầu trò chơi.
 void Snake::Start() {
-    MainScreen();   // Hiển thị màn hình chính (menu chọn chế độ).
-    char startKey = _getch();
+    MainScreen();                 // Hiển thị màn hình chính (menu chọn chế độ).
+    char startKey = _getch();    // Đợi người dùng nhấn phím.
     if (startKey == '1') {
         isHardMode = false;
         gameOver = false;
