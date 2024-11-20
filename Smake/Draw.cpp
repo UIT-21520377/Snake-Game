@@ -17,7 +17,7 @@ void Snake::Rules()
     cout << " - You can move through the boundaries (no collisions)." << endl;
 
     cout << endl; // Tạo khoảng cách giữa hai chế độ.
-
+    // Đặt màu chữ thành màu đỏ sáng và in tiêu đề cho chế độ khó.
     SetConsoleTextAttribute(hConsole, FOREGROUND_RED | FOREGROUND_INTENSITY); 
     cout << "HARD MODE:" << endl;
     SetConsoleTextAttribute(hConsole, FOREGROUND_RED | FOREGROUND_GREEN | FOREGROUND_BLUE | FOREGROUND_INTENSITY); 
