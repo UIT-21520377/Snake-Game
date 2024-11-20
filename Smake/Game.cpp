@@ -18,7 +18,7 @@ void Snake::Start() {
         gameOver = false;        // Trò chơi chưa kết thúc.
         Reset();                 // Thiết lập lại trạng thái ban đầu của trò chơi.
     }
-    else {
+    else {                       // Nếu người dùng nhấn phím khác.
         gameOver = true;
     }
 }
