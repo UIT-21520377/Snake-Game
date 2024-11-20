@@ -13,7 +13,7 @@ void Snake::Start() {
         Reset();                 // Thiết lập lại trạng thái ban đầu của trò chơi.
     }
     else if (startKey == '2') {  // Nếu người dùng chọn chế độ "Hard Mode".
-        isHardMode = true;
+        isHardMode = true;       // Đặt chế độ khó (có chướng ngại vật, tốc độ nhanh).
         GenerateBlocks();
         gameOver = false;
         Reset();
