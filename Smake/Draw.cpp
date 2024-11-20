@@ -26,7 +26,7 @@ void Snake::Rules()
     cout << " - There are obstacles you must avoid." << endl;
     cout << " - You cannot touch the boundaries (collisions end the game)." << endl;
 
-    cout << endl; 
+    cout << endl; // Tạo khoảng cách cuối cùng trước khi thoát hàm.
 }
 
 void Snake::MainScreen()
