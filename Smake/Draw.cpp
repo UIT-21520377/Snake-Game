@@ -35,7 +35,7 @@ void Snake::MainScreen()
    cout << "             /   \\               \n";
    cout << "        ____/_____\\____          \n";
    cout << "       /              \\          \n";
-   cout << "      /  \\   O   O   / \\        \n";
+   cout << "      /  \\   $   $   / \\        \n";
    cout << "     |    \\    ^    /   |        \n";
    cout << "      \\    \\_______/   /        \n";
    cout << "       \\                /        \n";
