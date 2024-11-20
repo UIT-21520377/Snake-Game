@@ -5,6 +5,7 @@ using namespace std;
 
 void Snake::Rules()
 {
+    // Xóa màn hình console, chuẩn bị hiển thị nội dung mới.
     system("cls");
 
     SetConsoleTextAttribute(hConsole, FOREGROUND_GREEN | FOREGROUND_INTENSITY); 
