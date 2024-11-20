@@ -46,7 +46,7 @@ void Snake::MainScreen()
    cout << "    /                       \\    \n";
    cout << "   /                         \\   \n";
    cout << "  /                           \\  \n";
-   cout << " ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ \n";
+   cout << " -----~~~~~~~~~~~~~~~~~~~~~~----- \n";
     
     // Hiển thị menu chính với các tùy chọn chơi.
     SetConsoleTextAttribute(hConsole, FOREGROUND_RED | FOREGROUND_GREEN | FOREGROUND_BLUE | FOREGROUND_INTENSITY); 
