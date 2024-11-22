@@ -1,3 +1,4 @@
+#include "SnakeGame.h"
 void Snake::Rules() {
     system("cls");
 
