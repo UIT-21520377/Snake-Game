@@ -1,6 +1,6 @@
 #include "SnakeGame.h"
 void Snake::Rules() {
-    system("cls");
+    //system("cls");
 
     SetConsoleTextAttribute(hConsole, FOREGROUND_GREEN | FOREGROUND_INTENSITY);
     cout << "SIMPLE MODE:" << endl;
